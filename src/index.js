@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-export default function gendiff(filepath1, filepath2, options) {
+export default function gendiff(filepath1, filepath2) {
   const fileData1 = JSON.parse(fs.readFileSync(path.resolve(filepath1), 'utf8'));
   const fileData2 = JSON.parse(fs.readFileSync(path.resolve(filepath2), 'utf8'));
 
