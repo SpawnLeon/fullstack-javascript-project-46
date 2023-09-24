@@ -1,6 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/SpawnLeon/fullstack-javascript-project-46/workflows/hexlet-check/badge.svg)](https://github.com/SpawnLeon/fullstack-javascript-project-46/actions)
-![Say Hello Workflow](https://github.com/SpawnLeon/fullstack-javascript-project-46/actions/workflows/say-hello.yml/badge.svg)
+[![Project check ](https://github.com/SpawnLeon/fullstack-javascript-project-46/workflows/project-check/badge.svg)](https://github.com/SpawnLeon/fullstack-javascript-project-46/actions)
+
 
 
 ### Codeclimate

@@ -12,14 +12,14 @@ export default function gendiff(filepath1, filepath2) {
 
   sortedKeys.forEach((key) => {
     if (!Object.hasOwn(fileData2, key)) {
-      result.push(`- ${key}: ${fileData1[key]}`);
+      result.push(`  - ${key}: ${fileData1[key]}`);
     } else if (!Object.hasOwn(fileData1, key)) {
-      result.push(`+ ${key}: ${fileData2[key]}`);
+      result.push(`  + ${key}: ${fileData2[key]}`);
     } else if (fileData1[key] !== fileData2[key]) {
-      result.push(`- ${key}: ${fileData1[key]}`);
-      result.push(`+ ${key}: ${fileData2[key]}`);
+      result.push(`  - ${key}: ${fileData1[key]}`);
+      result.push(`  + ${key}: ${fileData2[key]}`);
     } else {
-      result.push(`  ${key}: ${fileData1[key]}`);
+      result.push(`    ${key}: ${fileData1[key]}`);
     }
   });
 
