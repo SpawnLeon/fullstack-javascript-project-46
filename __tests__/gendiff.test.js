@@ -11,12 +11,12 @@ describe('Testing gendiff', () => {
   const getFilePathInFixtures = (filename) => path.join(dirname, '__fixtures__', filename);
   const expectedContent = readFileSync(getFilePathInFixtures('expected.txt'), 'utf-8');
 
-  test('json', () => {
-    const pathToFirstFile = getFilePathInFixtures('file1.json');
-    const pathToSecondFile = getFilePathInFixtures('file2.json');
+  test.each([['json'], ['yml']])('%s files comparison', (extension) => {
+    const filepath1 = getFilePathInFixtures(`file1.${extension}`);
+    const filepath2 = getFilePathInFixtures(`file2.${extension}`);
 
-    const resultContent = generateDiff(pathToFirstFile, pathToSecondFile);
+    const result = generateDiff(filepath1, filepath2);
 
-    expect(resultContent).toBe(expectedContent);
+    expect(result).toBe(expectedContent);
   });
 });
